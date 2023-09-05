@@ -1,0 +1,179 @@
+.form {
+  position: absolute;
+  top: 350px;
+  left: 70px;
+}
+.button-child {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: blue;
+  border-radius: 3px;
+  box-sizing: border-box;
+  width: 117px;
+  height: 34px;
+}
+.search {
+  position: absolute;
+  top: 9px;
+  left: 35px;
+}
+.button,
+.select-person-child {
+  position: absolute;
+  top: 0;
+  height: 34px;
+}
+.button {
+  left: 683px;
+  width: 117px;
+  color: white;
+}
+.select-person-child {
+  left: 0;
+  border-radius: 2px;
+  background-color: white;
+  border: 1px solid black;
+  box-sizing: border-box;
+  width: 52px;
+}
+.div {
+  position: absolute;
+  top: 8px;
+  left: 34px;
+  display: inline-block;
+  width: 12px;
+  height: 21px;
+}
+.mdipeople-icon {
+  position: absolute;
+  top: 7px;
+  left: 6px;
+  width: 20px;
+  height: 20px;
+  overflow: hidden;
+}
+.select-person {
+  position: absolute;
+  top: 0;
+  left: 584px;
+  width: 52px;
+  height: 34px;
+}
+.select-date-child,
+.select-date-item {
+  position: absolute;
+  box-sizing: border-box;
+}
+.select-date-child {
+  top: 0;
+  left: 0;
+  background-color: white;
+  border: 1px solid black;
+  width: 214px;
+  height: 34px;
+}
+.select-date-item {
+  top: 5.5px;
+  left: 117.5px;
+  border-right: 1px solid grey;
+  width: 1px;
+  height: 24px;
+}
+.check-in,
+.check-out {
+  position: absolute;
+  top: 8px;
+  left: 43px;
+  display: inline-block;
+  width: 64px;
+  height: 20px;
+}
+.check-out {
+  left: 129px;
+  width: 76px;
+}
+.material-symbolscalendar-toda-icon {
+  position: absolute;
+  top: 8px;
+  left: 12px;
+  width: 16px;
+  height: 16px;
+  overflow: hidden;
+}
+.search-child,
+.select-date {
+  position: absolute;
+  top: 0;
+  left: 323px;
+  width: 214px;
+  height: 34px;
+}
+.search-child {
+  left: 0;
+  border-radius: 2px;
+  background-color: white;
+  border: 1px solid grey;
+  box-sizing: border-box;
+  width: 276px;
+}
+.type-city-place {
+  position: absolute;
+  top: 8px;
+  left: 31px;
+  display: inline-block;
+  width: 220px;
+  height: 19px;
+}
+.vector-icon,
+.vector-icon1 {
+  position: absolute;
+  height: 41.18%;
+  width: 4.14%;
+  top: 29.41%;
+  right: 92.24%;
+  bottom: 29.41%;
+  left: 3.62%;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+}
+.vector-icon1 {
+  height: 47.06%;
+  width: 5.8%;
+  top: 26.47%;
+  right: 4.71%;
+  bottom: 26.47%;
+  left: 89.49%;
+}
+.search1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 276px;
+  height: 34px;
+  color: grey;
+}
+.dropdown-child,
+.dropdown-item {
+  position: absolute;
+  left: 0;
+  width: 274px;
+}
+.dropdown-child {
+  top: 2px;
+  border-radius: 2px;
+  box-shadow: 0 3px 13px -2px rgba(0, 0, 0, 0.25);
+  height: 162px;
+}
+.dropdown-item {
+  top: 0;
+  height: 34px;
+}
+
+.explore-hotels {
+  position: absolute;
+  top: 480px;
+  left: 524px;
+  font-size: 30px;
+}

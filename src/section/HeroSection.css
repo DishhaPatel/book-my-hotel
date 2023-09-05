@@ -1,0 +1,21 @@
+.hero-heading,
+.hero-description {
+  position: absolute;
+  display: inline-block;
+  width: 540px;
+  height: 45px;
+}
+.hero-description {
+  top: 75px;
+  font-size: 20px;
+  width: 727px;
+  height: 60px;
+}
+.hero-text {
+  position: absolute;
+  top: 128px;
+  left: 72px;
+  width: 727px;
+  height: 135px;
+  font-size: 40px;
+}

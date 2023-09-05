@@ -1,0 +1,29 @@
+.HotelCard {
+  height: 580px;
+  width: 840px;
+  background-color: whitesmoke;
+  border-radius: 8px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  background-color: black;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+.check-in,
+.check-out {
+  position: absolute;
+  top: 8px;
+  left: 43px;
+  display: inline-block;
+  width: 64px;
+  height: 20px;
+}
+.check-out {
+  left: 129px;
+  width: 76px;
+}

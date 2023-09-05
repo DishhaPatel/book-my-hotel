@@ -1,0 +1,30 @@
+.filters {
+  font-size: 30px;
+}
+.clear {
+  font-size: 18px;
+  color: rgb(66, 66, 220);
+}
+.filter-text {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+
+.filter-section {
+  width: 400px;
+  position: absolute;
+  top: 580px;
+}
+.PRICERANGE,
+.RATINGS,
+.CITY {
+  margin-top: 20px;
+  margin-left: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+label {
+  font-size: 19px;
+}
