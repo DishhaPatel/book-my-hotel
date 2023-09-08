@@ -1,17 +1,76 @@
-import React from "react";
+import { Link } from "react-router-dom";
 import "./HotelCard.css";
 
-export default function HotelCard() {
+// eslint-disable-next-line react/prop-types
+export default function HotelCard({ details }) {
+  // eslint-disable-next-line react/prop-types
+  const { name, image_url, rating, city, id } = details;
   return (
-    <div className="container">
-      <div className="HotelCard">
-        <div className="header">
-          {`The Peninsula Hotel >`}
-          <h1>Grand Couple Room</h1>
+    <div className="card-container">
+      <img src={image_url} alt={name} className="card-image" />
+      <div className="card-body">
+        <div className="card-title">
+          <h6
+            style={{
+              color: "#000",
+              fontFamily: "Inter",
+              fontSize: "16px",
+              fontStyle: "normal",
+              fontWeight: 400,
+              lineHeight: "normal",
+            }}
+          >
+            {name}
+          </h6>
+          <span style={{ fontSize: 12 }}>{city}</span>
         </div>
-        <div>
-          <img src="" alt="img" />
+        <div className="rating">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="18"
+            height="18"
+            viewBox="0 0 18 18"
+            fill="none"
+          >
+            <path
+              d="M8.99999 12.9525L12.1125 14.835C12.6825 15.18 13.38 14.67 13.23 14.025L12.405 10.485L15.1575 8.10001C15.66 7.66501 15.39 6.84001 14.73 6.78751L11.1075 6.48001L9.68999 3.13501C9.43499 2.52751 8.56499 2.52751 8.30999 3.13501L6.89249 6.47251L3.26999 6.78001C2.60999 6.83251 2.33999 7.65751 2.84249 8.09251L5.59499 10.4775L4.76999 14.0175C4.61999 14.6625 5.31749 15.1725 5.88749 14.8275L8.99999 12.9525Z"
+              fill="black"
+            />
+          </svg>
+          <span>{rating}</span>
         </div>
+      </div>
+      <div className="card-footer">
+        <div className="price">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            viewBox="0 0 20 20"
+            fill="none"
+          >
+            <path
+              d="M11.7917 17.5C11.6806 17.5 11.5728 17.4792 11.4683 17.4375C11.3639 17.3958 11.2703 17.3333 11.1875 17.25L6.16667 12.0208C6.06945 11.9236 5.98945 11.7917 5.92667 11.625C5.86389 11.4583 5.83278 11.3056 5.83334 11.1667C5.83334 10.8472 5.94806 10.5728 6.1775 10.3433C6.40695 10.1139 6.68111 9.99945 7 10H8.75C9.48611 10 10.1217 9.76028 10.6567 9.28084C11.1917 8.80139 11.5144 8.20778 11.625 7.5H5.83334C5.59723 7.5 5.39917 7.42 5.23917 7.26C5.07917 7.1 4.99945 6.90223 5 6.66667C5 6.43056 5.08 6.2325 5.24 6.0725C5.4 5.9125 5.59778 5.83278 5.83334 5.83334H11.375C11.1389 5.34723 10.7881 4.94778 10.3225 4.635C9.85695 4.32223 9.33278 4.16611 8.75 4.16667H5.83334C5.59723 4.16667 5.39917 4.08667 5.23917 3.92667C5.07917 3.76667 4.99945 3.56889 5 3.33334C5 3.09723 5.08 2.89917 5.24 2.73917C5.4 2.57917 5.59778 2.49945 5.83334 2.5H14.1667C14.4028 2.5 14.6008 2.58 14.7608 2.74C14.9208 2.9 15.0006 3.09778 15 3.33334C15 3.56945 14.92 3.7675 14.76 3.9275C14.6 4.0875 14.4022 4.16723 14.1667 4.16667H12.2917C12.4861 4.40278 12.6597 4.65973 12.8125 4.9375C12.9653 5.21528 13.0833 5.51389 13.1667 5.83334H14.1667C14.4028 5.83334 14.6008 5.91334 14.7608 6.07334C14.9208 6.23334 15.0006 6.43111 15 6.66667C15 6.90278 14.92 7.10084 14.76 7.26084C14.6 7.42084 14.4022 7.50056 14.1667 7.5H13.3125C13.2014 8.68056 12.7153 9.67028 11.8542 10.4692C10.9931 11.2681 9.95834 11.6672 8.75 11.6667H8.14584L12.3958 16.0833C12.6458 16.3472 12.6981 16.6494 12.5525 16.99C12.4069 17.3306 12.1533 17.5006 11.7917 17.5Z"
+              fill="black"
+            />
+          </svg>
+          <span>1700 - 5000</span>
+        </div>
+        <Link className="view-btn" to={`/hotel/${id}`}>
+          <span style={{ marginRight: 5 }}>View</span>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="18"
+            height="18"
+            viewBox="0 0 18 18"
+            fill="none"
+          >
+            <path
+              d="M10.5 13.5L9.45 12.4125L12.1125 9.75H3V8.25H12.1125L9.45 5.5875L10.5 4.5L15 9L10.5 13.5Z"
+              fill="white"
+            />
+          </svg>
+        </Link>
       </div>
     </div>
   );

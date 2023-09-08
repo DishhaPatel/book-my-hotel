@@ -1,0 +1,86 @@
+.booking-container {
+  display: flex;
+  width: 100%;
+}
+
+.booking-container .right-side {
+  flex: 0.4;
+}
+
+.booking-container .left-side {
+  flex: 0.6;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.amenities-item {
+  display: inline-block;
+  margin: 5px;
+  font-size: 14px;
+  padding: 7px 12px;
+  border-radius: 15px;
+  border: 1px solid #0a66bb;
+  background: #fff;
+}
+
+.booking-room-img {
+  width: 100%;
+  object-fit: contain;
+}
+
+.value-item {
+  display: block;
+  text-align: left;
+  color: #0a66bb;
+  font-weight: bold;
+}
+
+.date-range {
+  text-align: center;
+}
+
+.date-range label,
+input {
+  margin: 10px;
+  font-size: 16px;
+}
+
+.date-range input[type="date"] {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.add-btn {
+  background-color: transparent;
+  color: #0a66bb;
+  font-weight: bold;
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+  float: right;
+}
+
+.add-btn span {
+  margin-top: 10px;
+  margin-left: 2px;
+}
+
+.person-list {
+  max-height: 350px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.book-btn {
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  height: 34px;
+  border-radius: 2px;
+  border: 1px solid #0a66bb;
+  background: #0a66bb;
+  color: #ffffff;
+  cursor: pointer;
+}

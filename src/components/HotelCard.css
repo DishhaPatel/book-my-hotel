@@ -1,29 +1,51 @@
-.HotelCard {
-  height: 580px;
-  width: 840px;
-  background-color: whitesmoke;
-  border-radius: 8px;
+.card-container {
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid #878787;
+  width: 300px;
+  margin: 10px;
 }
-
-.container {
-  display: flex;
-  justify-content: center;
-  background-color: black;
-}
-.header {
+.card-body {
   display: flex;
   justify-content: space-between;
 }
-.check-in,
-.check-out {
-  position: absolute;
-  top: 8px;
-  left: 43px;
-  display: inline-block;
-  width: 64px;
-  height: 20px;
+
+.card-image {
+  width: 280px;
+  height: 210px;
+  /* object-fit: contain; */
 }
-.check-out {
-  left: 129px;
-  width: 76px;
+
+.rating {
+  display: flex;
+  align-items: center;
+}
+.rating span {
+  color: #000;
+  font-family: Inter;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.price {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.view-btn {
+  padding: 5px 30px;
+  background: #0a66bb;
+  color: white;
+  display: flex;
+  align-items: center;
 }
