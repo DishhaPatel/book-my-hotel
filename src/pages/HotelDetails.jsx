@@ -30,8 +30,6 @@ function HotelDetailsPage() {
       } else {
         setError("Something went wrong. Please try again later.");
       }
-
-      console.log(res);
     } catch (error) {
       setError("Something went wrong. Please try again later.");
     } finally {
@@ -49,14 +47,16 @@ function HotelDetailsPage() {
       {!isLoading && fetchedDetails && (
         <>
           <HotelInfo info={fetchedDetails} />
-          <RoomList
-            rooms={fetchedDetails?.rooms || []}
-            hotelName={fetchedDetails?.name}
-          />
-          <HotelAbout
-            name={fetchedDetails?.name || ""}
-            description={fetchedDetails?.description || ""}
-          />
+          <div className="container">
+            <RoomList
+              rooms={fetchedDetails?.rooms || []}
+              hotelName={fetchedDetails?.name}
+            />
+            <HotelAbout
+              name={fetchedDetails?.name || ""}
+              description={fetchedDetails?.description || ""}
+            />
+          </div>
         </>
       )}
       {!isLoading && !fetchedDetails && error && <h1>{error}</h1>}

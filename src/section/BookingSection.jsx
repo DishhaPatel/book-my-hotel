@@ -96,18 +96,21 @@ function BookingSection({ selectedRoom, handleBookingModalCLose }) {
               <PersonForm key={index} title={`Person ${index + 1}`} />
             ))}
           </div>
-          <div style={{ display: "flex", justifyContent: "flex-end" }}>
-            <button
-              type="button"
-              className="flex-container add-btn"
-              onClick={() =>
-                setPersons((_persons) => [..._persons, { name: "guest" }])
-              }
-            >
-              <Icon icon="ic:baseline-plus" style={{ fontSize: "20px" }} />
-              <span>ADD PERSON</span>
-            </button>
-          </div>
+
+          {persons.length < 4 && (
+            <div style={{ display: "flex", justifyContent: "flex-end" }}>
+              <button
+                type="button"
+                className="flex-container add-btn"
+                onClick={() =>
+                  setPersons((_persons) => [..._persons, { name: "guest" }])
+                }
+              >
+                <Icon icon="ic:baseline-plus" style={{ fontSize: "20px" }} />
+                <span>ADD PERSON</span>
+              </button>
+            </div>
+          )}
 
           <button type="button" className="book-btn" onClick={handleBookNow}>
             Book

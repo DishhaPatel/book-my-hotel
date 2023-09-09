@@ -2,7 +2,8 @@ import "./HeroSection.css";
 
 export default function HeroSection() {
   return (
-    <div className="hero-container">
+    <div className="hero-container container">
+      <div className="overlay" />
       <div className="content-wrapper">
         <div className="hero-text">
           <h2 className="hero-heading">Find the Perfect deal, always.</h2>

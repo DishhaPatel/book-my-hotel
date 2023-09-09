@@ -5,15 +5,13 @@ import Header from "./layout/Header";
 
 function App() {
   return (
-    <>
+    <Router>
       <Header />
-      <Router>
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/hotel/:hotelId" element={<HotelDetailsPage />} />
-        </Routes>
-      </Router>
-    </>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/hotel/:hotelId" element={<HotelDetailsPage />} />
+      </Routes>
+    </Router>
   );
 }
 

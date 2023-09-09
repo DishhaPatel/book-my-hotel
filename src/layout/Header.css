@@ -1,7 +1,11 @@
 .header {
   display: flex;
+  padding: 10px;
+  padding-right: 15px;
+  padding-left: 15px;
   justify-content: space-between;
-  height: 40px;
+  align-items: center;
+  height: 45px;
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -11,6 +15,7 @@
 .menu {
   display: flex;
   justify-content: space-between;
+  flex: 0.4;
 }
 
 .nav-list {
@@ -22,7 +27,7 @@
 }
 
 .nav-item a {
-  color: black
+  color: black;
 }
 
 .nav-item a {

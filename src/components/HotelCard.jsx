@@ -1,10 +1,8 @@
 import { Link } from "react-router-dom";
 import "./HotelCard.css";
 
-// eslint-disable-next-line react/prop-types
 export default function HotelCard({ details }) {
-  // eslint-disable-next-line react/prop-types
-  const { name, image_url, rating, city, id } = details;
+  const { name, image_url, rating, city, id, minPrice, maxPrice } = details;
   return (
     <div className="card-container">
       <img src={image_url} alt={name} className="card-image" />
@@ -54,7 +52,7 @@ export default function HotelCard({ details }) {
               fill="black"
             />
           </svg>
-          <span>1700 - 5000</span>
+          <span>{minPrice} - {maxPrice}</span>
         </div>
         <Link className="view-btn" to={`/hotel/${id}`}>
           <span style={{ marginRight: 5 }}>View</span>

@@ -1,3 +1,13 @@
+.explore-text {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  color: #000;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
 .explore-container {
   display: flex;
   width: 100%;

@@ -1,3 +1,91 @@
 .filter-container {
   flex: 0.2;
+  border-right: 1px solid rgba(10, 102, 187, 0.12);
+  margin-right: 30px;
+}
+
+.filter-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 10px;
+}
+
+.filter-container h5 {
+  color: #000;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.filter-container button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  color: #0a66bb;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.tag-item {
+  display: inline-flex;
+  padding: 7px 10px;
+  margin: 5px;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 12px;
+  border: 1px solid #0a66bb;
+  background: rgba(10, 102, 187, 0.12);
+}
+
+.tag-item span {
+  color: #0a66bb;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.filter-section {
+  margin-top: 20px;
+  margin-bottom: 5px;
+}
+
+.filter-section h5 {
+  margin-bottom: 10px;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.filter-item {
+  display: flex;
+  align-items: center;
+  color: #000;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  cursor: pointer;
+}
+
+.filter-item input {
+  width: 18px;
+  height: 18px;
+  border-radius: 2px;
+  margin-left: 0;
+  border: 1px solid rgba(0, 0, 0, 0.75);
+  cursor: pointer;
+}
+
+.filter-item label {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  cursor: pointer;
 }

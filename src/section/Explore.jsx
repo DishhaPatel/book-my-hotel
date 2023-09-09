@@ -1,14 +1,19 @@
+import { useState } from "react";
 import Filter from "../components/Filter";
 import HotelList from "../components/HotelList";
-import './Explore.css'
+import "./Explore.css";
 
 function Explore() {
+  const [selectedFilters, setSelectedFilters] = useState([]);
   return (
     <div className="container">
-      <h3 className="text-center">Explore Hotels</h3>
+      <h3 className="text-center explore-text">Explore Hotels</h3>
       <div className="explore-container">
-        <Filter />
-        <HotelList />
+        <Filter
+          selectedFilters={selectedFilters}
+          setSelectedFilters={setSelectedFilters}
+        />
+        <HotelList selectedFilters={selectedFilters} />
       </div>
     </div>
   );
