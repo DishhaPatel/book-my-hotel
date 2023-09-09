@@ -1,6 +1,6 @@
 .header {
   display: flex;
-  padding: 10px;
+  padding: 20px;
   padding-right: 15px;
   padding-left: 15px;
   justify-content: space-between;
@@ -21,15 +21,30 @@
 .nav-list {
   text-decoration: none;
   display: flex;
+  margin-left: 50px;
 }
 .nav-item {
-  margin: auto 20px;
+  margin: auto 50px;
+  font-size: 19px;
+  font-weight: 500;
 }
 
 .nav-item a {
   color: black;
 }
-
+.nav-item a:hover {
+  color: rgb(9, 9, 121);
+}
+.sign-in {
+  font-size: 18px;
+  font-weight: 500;
+  font-family: sans-serif;
+  margin-right: 40px;
+}
+.sign-in:hover {
+  color: navy;
+  cursor: pointer;
+}
 .nav-item a {
   text-decoration: none;
 }

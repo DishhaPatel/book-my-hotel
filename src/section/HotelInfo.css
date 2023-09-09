@@ -40,3 +40,7 @@
   cursor: pointer;
   color: #0a66bb;
 }
+
+.back-button:hover {
+  transform: scale(1.1);
+}

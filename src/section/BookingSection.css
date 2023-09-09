@@ -22,6 +22,7 @@
   border-radius: 15px;
   border: 1px solid #0a66bb;
   background: #fff;
+  margin-top: 150px;
 }
 
 .booking-room-img {
@@ -59,7 +60,7 @@ input {
   font-size: 14px;
   border: none;
   cursor: pointer;
-  float: right;
+  margin-right: 20px;
 }
 
 .add-btn span {
@@ -74,7 +75,7 @@ input {
 }
 
 .book-btn {
-  width: 100%;
+  width: 85%;
   margin-top: 20px;
   margin-bottom: 10px;
   height: 34px;
@@ -83,4 +84,20 @@ input {
   background: #0a66bb;
   color: #ffffff;
   cursor: pointer;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.book-btn:hover {
+  background: #0e4375;
+  border-radius: 5px;
+  color: whitesmoke;
+}
+.flex-container {
+  padding: 4px;
+}
+
+.booking-details {
+  margin-bottom: 40px;
+  margin-left: 10px;
 }

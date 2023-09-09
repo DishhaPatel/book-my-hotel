@@ -42,7 +42,7 @@ function RoomCard({ data, onBookNow }) {
           className="book-now-btn flex-container"
           onClick={() => onBookNow(data)}
         >
-          <span>Book Now</span>
+          <span> Book Now</span>
           <Icon icon="mdi:arrow-right" style={{ marginLeft: 5 }} />
         </button>
       </div>

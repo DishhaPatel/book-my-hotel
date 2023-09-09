@@ -55,19 +55,32 @@ function BookingSection({ selectedRoom, handleBookingModalCLose }) {
         <div className="booking-details flex-container">
           <div>
             <span className="flex-container">
-              <Icon icon="material-symbols:group" />
-              <span style={{ marginLeft: 4 }}>Person:</span>
+              <Icon
+                style={{ marginLeft: 20, marginBottom: 10 }}
+                icon="material-symbols:group"
+              />
+              <span style={{ marginLeft: 4, marginBottom: 10 }}>Person:</span>
             </span>
             <span className="flex-container">
-              <Icon icon="ic:round-event" />
-              <span style={{ marginLeft: 4 }}>Check-in: </span>
+              <Icon
+                style={{ marginLeft: 20, marginBottom: 10 }}
+                icon="ic:round-event"
+              />
+              <span style={{ marginLeft: 4, marginBottom: 10 }}>
+                Check-in:{" "}
+              </span>
             </span>
             <span className="flex-container">
-              <Icon icon="ic:round-event" />
-              <span style={{ marginLeft: 4 }}>Check-out:</span>
+              <Icon
+                style={{ marginLeft: 20, marginBottom: 10 }}
+                icon="ic:round-event"
+              />
+              <span style={{ marginLeft: 4, marginBottom: 10 }}>
+                Check-out:
+              </span>
             </span>
           </div>
-          <div style={{ paddingLeft: 5 }}>
+          <div style={{ paddingLeft: 5, marginBottom: 10 }}>
             <span className="value-item">{persons.length}</span>
             <span className="value-item">
               {bookingDateRange.startDate

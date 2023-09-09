@@ -48,4 +48,13 @@
   color: white;
   display: flex;
   align-items: center;
+  border-radius: 5px;
+  height: 36px;
+  font-size: 17px;
+}
+
+.view-btn:hover {
+  background: #0e4375;
+  border-radius: 6px;
+  color: whitesmoke;
 }

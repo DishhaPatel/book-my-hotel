@@ -1,6 +1,6 @@
-.person-form-container{
-    margin: 10px 5px;
-    padding: 5px 10px;
+.person-form-container {
+  margin: 10px 5px;
+  padding: 5px 10px;
 }
 .person-form-container input {
   width: 100%;
@@ -15,8 +15,9 @@
   display: inline-flex;
   justify-content: center;
   margin: 5px 0;
-  border-radius: 0px 5px 5px 0px;
+  border-radius: 5px 5px 5px 5px;
   border: 1px solid #878787;
+  height: 36px;
 }
 
 .button-group button {

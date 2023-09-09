@@ -10,7 +10,11 @@ function PersonForm({ title }) {
   return (
     <div className="person-form-container">
       <h5 style={{ textAlign: "left" }}>{title}</h5>
-      <input type="text" placeholder="Name" />
+      <input
+        type="text"
+        placeholder="Name"
+        style={{ width: "96%", borderRadius: "4px" }}
+      />
 
       <div
         className="flex-container"
@@ -20,7 +24,7 @@ function PersonForm({ title }) {
           type="number"
           placeholder="Age"
           min="0"
-          style={{ maxWidth: "100px" }}
+          style={{ maxWidth: "110px", borderRadius: "3px" }}
         />
 
         <div className="button-group">

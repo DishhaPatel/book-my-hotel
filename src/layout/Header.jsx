@@ -35,7 +35,7 @@ function Header() {
           </li>
         </ul>
       </div>
-      <div>Sign in</div>
+      <div className="sign-in">Sign in</div>
     </header>
   );
 }
