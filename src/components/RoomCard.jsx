@@ -2,7 +2,7 @@ import { Icon } from "@iconify/react";
 import ImageSlider from "./ImageSlider";
 import "./RoomCard.css";
 
-function RoomCard({ data, onBookNow }) {
+function RoomCard({ data, onBookNow, onViewFacilities }) {
   const { name, price, image_urls } = data;
 
   return (
@@ -37,7 +37,9 @@ function RoomCard({ data, onBookNow }) {
       </span>
 
       <div className="room-card-footer">
-        <button className="outline-btn">View facilities</button>
+        <button className="outline-btn" onClick={() => onViewFacilities(data)}>
+          View facilities
+        </button>
         <button
           className="book-now-btn flex-container"
           onClick={() => onBookNow(data)}

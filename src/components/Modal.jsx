@@ -3,7 +3,7 @@ import { createPortal } from "react-dom";
 import "./Modal.css";
 import { Icon } from "@iconify/react";
 
-const Modal = ({ isOpen, handleClose, children, title }) => {
+const Modal = ({ isOpen, handleClose, children, title, customStyle = {} }) => {
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflowY = "hidden";
@@ -18,11 +18,11 @@ const Modal = ({ isOpen, handleClose, children, title }) => {
       {isOpen &&
         createPortal(
           <div className="modal">
-            <div className="modal-wrapper">
+            <div className="modal-wrapper" style={customStyle}>
               <div className="modal-header">
                 <h5>{title}</h5>
                 <span className="close-button" onClick={handleClose}>
-                  <Icon icon='maki:cross' />
+                  <Icon icon="maki:cross" />
                 </span>
               </div>
               <div className="modal-content">{children}</div>

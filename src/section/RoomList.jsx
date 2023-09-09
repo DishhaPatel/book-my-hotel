@@ -6,10 +6,16 @@ import BookingSection from "./BookingSection";
 
 function RoomList({ rooms, hotelName }) {
   const [isOpen, setIsOpen] = useState(false);
+  const [IsOpenFacilities, setIsOpenFacilities] = useState(false);
   const [selectedRoom, setSelectedRoom] = useState({});
 
   const onBookNowClick = (data) => {
     setIsOpen(true);
+    setSelectedRoom(data);
+  };
+
+  const onViewFacilitiesClick = (data) => {
+    setIsOpenFacilities(true);
     setSelectedRoom(data);
   };
 
@@ -18,10 +24,20 @@ function RoomList({ rooms, hotelName }) {
     setSelectedRoom({});
   };
 
+  const handleFacilitiesModalClose = () => {
+    setIsOpenFacilities(false);
+    setSelectedRoom({});
+  };
+
   return (
     <div className="room-list-container">
       {rooms.map((room) => (
-        <RoomCard key={room.id} data={room} onBookNow={onBookNowClick} />
+        <RoomCard
+          key={room.id}
+          data={room}
+          onBookNow={onBookNowClick}
+          onViewFacilities={onViewFacilitiesClick}
+        />
       ))}
       <Modal
         isOpen={isOpen}
@@ -32,6 +48,22 @@ function RoomList({ rooms, hotelName }) {
           selectedRoom={selectedRoom}
           handleBookingModalCLose={handleBookingModalCLose}
         />
+      </Modal>
+
+      <Modal
+        isOpen={IsOpenFacilities}
+        title="View Facilities"
+        handleClose={handleFacilitiesModalClose}
+        customStyle={{ width: "100%", maxWidth: "500px" }}
+      >
+        <div className="amenities-list">
+          {Array.isArray(selectedRoom?.amenities) &&
+            selectedRoom.amenities.map((item, index) => (
+              <div key={index} className="amenities-item">
+                {item}
+              </div>
+            ))}
+        </div>
       </Modal>
     </div>
   );
