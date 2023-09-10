@@ -52,7 +52,7 @@ function RoomList({ rooms, hotelName }) {
 
       <Modal
         isOpen={IsOpenFacilities}
-        title="View Facilities"
+        title="Facilities"
         handleClose={handleFacilitiesModalClose}
         customStyle={{ width: "100%", maxWidth: "500px" }}
       >

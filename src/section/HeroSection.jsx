@@ -61,7 +61,7 @@ export default function HeroSection() {
           </div>
         </div>
         <div className="form-container">
-          <div style={{ position: "relative" }}>
+          <div className="input-wrapper" style={{ position: "relative" }}>
             <div className="input-container">
               <span className="input-icon start">
                 <Icon icon="carbon:location-filled" />
@@ -94,42 +94,59 @@ export default function HeroSection() {
             )}
           </div>
 
-          <DateRangePicker
-            dateRange={bookingDateRange}
-            setDateRange={setBookingDateRange}
-          />
-          <div style={{ position: "relative" }}>
-            <div
-              className="person-menu"
-              onClick={() => setIsOpenPersonMenu(true)}
-            >
-              <Icon
-                icon="ic:baseline-people"
-                style={{ color: "#0A66BB", fontSize: 20 }}
-              />
-              <span>{selectedPerson}</span>
-            </div>
-            {isOpenPersonMenu && (
-              <ul
-                className="suggestions-list"
-                onBlur={() => setIsOpenHotelMenu(false)}
+          <div
+            className="flex-container"
+            style={{ justifyContent: "space-between" }}
+          >
+            <DateRangePicker
+              dateRange={bookingDateRange}
+              setDateRange={setBookingDateRange}
+            />
+            <div style={{ position: "relative" }}>
+              <div
+                className="person-menu"
+                onClick={() => setIsOpenPersonMenu(true)}
               >
-                {[1, 2, 3, 4].map((person, index) => (
-                  <li
-                    key={index}
-                    className="suggestion-item"
-                    onClick={() => {
-                      setSelectedPerson(person);
-                      setIsOpenPersonMenu(false);
-                    }}
-                  >
-                    {person}
-                  </li>
-                ))}
-              </ul>
-            )}
+                <Icon
+                  icon="ic:baseline-people"
+                  style={{ color: "#0A66BB", fontSize: 20 }}
+                />
+                <span>{selectedPerson}</span>
+              </div>
+              {isOpenPersonMenu && (
+                <ul
+                  className="suggestions-list"
+                  onBlur={() => setIsOpenHotelMenu(false)}
+                >
+                  {[1, 2, 3, 4].map((person, index) => (
+                    <li
+                      key={index}
+                      className="suggestion-item"
+                      onClick={() => {
+                        setSelectedPerson(person);
+                        setIsOpenPersonMenu(false);
+                      }}
+                    >
+                      {person}
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </div>
           </div>
-          <button className="search-btn" type="button" onClick={handleSearch}>
+          <button
+            className="search-btn"
+            type="button"
+            onClick={handleSearch}
+            disabled={
+              !(
+                selectedHotel?.id &&
+                bookingDateRange.startDate &&
+                bookingDateRange.endDate &&
+                selectedPerson
+              )
+            }
+          >
             Search
           </button>
         </div>

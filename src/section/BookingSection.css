@@ -14,6 +14,10 @@
   justify-content: space-between;
 }
 
+.amenities-list {
+  padding-top: 10px;
+}
+
 .amenities-item {
   display: inline-block;
   margin: 5px;
@@ -22,11 +26,11 @@
   border-radius: 15px;
   border: 1px solid #0a66bb;
   background: #fff;
-  margin-top: 150px;
 }
 
 .booking-room-img {
   width: 100%;
+  height: 100%;
   object-fit: contain;
 }
 
@@ -35,6 +39,7 @@
   text-align: left;
   color: #0a66bb;
   font-weight: bold;
+  margin-bottom: 10px;
 }
 
 .date-range {
@@ -98,6 +103,38 @@ input {
 }
 
 .booking-details {
-  margin-bottom: 40px;
-  margin-left: 10px;
+  display: flex;
+  justify-content: flex-start;
+  padding-top: 2%;
+  padding-left: 10%;
+  align-items: center;
+}
+
+/* ######## Media Query  ###########*/
+
+@media (max-width: 992px) {
+  .filter-container {
+    flex: 0.3;
+  }
+}
+
+@media (max-width: 768px) {
+  .booking-container {
+    flex-direction: column;
+    max-height: 80vh;
+    overflow-y: auto;
+  }
+
+  .person-list {
+    max-height: unset;
+    overflow-y: unset;
+  }
+
+  .booking-container .right-side {
+    flex: unset;
+  }
+
+  .booking-container .left-side {
+    flex: unset;
+  }
 }

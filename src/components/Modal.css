@@ -37,11 +37,11 @@
 
 .close-button {
   cursor: pointer;
-  font-size: 17px;
+  font-size: 20px;
   /* background: rgb(230, 229, 229); */
   border-radius: 50%;
-  padding: 6px;
-  height: 30px;
+  padding: 7px;
+  height: 35px;
 }
 
 .close-button:hover {
