@@ -19,6 +19,9 @@
   border-radius: 4px;
   margin: 0 5px;
 }
+.pagination button:hover {
+  background-color: rgba(10, 102, 187, 0.12);
+}
 
 .page-active {
   border-radius: 3px !important;

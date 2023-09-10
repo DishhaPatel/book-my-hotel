@@ -19,7 +19,7 @@ function RoomCard({ data, onBookNow, onViewFacilities }) {
       </div>
       <span
         className="flex-container"
-        style={{ marginTop: 5, marginBottom: 5 }}
+        style={{ marginTop: 13, marginBottom: 30 }}
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -33,7 +33,10 @@ function RoomCard({ data, onBookNow, onViewFacilities }) {
             fill="black"
           />
         </svg>
-        <span style={{ marginLeft: 1 }}>{price} / night</span>
+        <span style={{ marginLeft: 1 }}>
+          {" "}
+          <span className="price-per-night">{price}</span> / night
+        </span>
       </span>
 
       <div className="room-card-footer">
@@ -44,8 +47,11 @@ function RoomCard({ data, onBookNow, onViewFacilities }) {
           className="book-now-btn flex-container"
           onClick={() => onBookNow(data)}
         >
-          <span> Book Now</span>
-          <Icon icon="mdi:arrow-right" style={{ marginLeft: 5 }} />
+          <span className="booknow"> Book Now </span>
+          <Icon
+            icon="mdi:arrow-right"
+            style={{ marginLeft: 2, marginRight: 14 }}
+          />
         </button>
       </div>
     </div>

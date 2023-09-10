@@ -98,7 +98,6 @@ export default function HeroSection() {
             dateRange={bookingDateRange}
             setDateRange={setBookingDateRange}
           />
-
           <div style={{ position: "relative" }}>
             <div
               className="person-menu"
@@ -130,7 +129,6 @@ export default function HeroSection() {
               </ul>
             )}
           </div>
-
           <button className="search-btn" type="button" onClick={handleSearch}>
             Search
           </button>

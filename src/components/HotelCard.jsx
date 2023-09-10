@@ -11,16 +11,19 @@ export default function HotelCard({ details }) {
           <h6
             style={{
               color: "#000",
-              fontFamily: "Inter",
-              fontSize: "16px",
+              fontFamily: "sans-serif",
+              fontSize: "18px",
               fontStyle: "normal",
               fontWeight: 400,
               lineHeight: "normal",
+              marginBottom: "6px",
             }}
           >
             {name}
           </h6>
-          <span style={{ fontSize: 12 }}>{city}</span>
+          <span style={{ fontSize: 14, color: "#555", marginLeft: 3 }}>
+            {city}
+          </span>
         </div>
         <div className="rating">
           <svg
@@ -52,7 +55,9 @@ export default function HotelCard({ details }) {
               fill="black"
             />
           </svg>
-          <span>{minPrice} - {maxPrice}</span>
+          <span>
+            {minPrice} - {maxPrice}
+          </span>
         </div>
         <Link className="view-btn" to={`/hotel/${id}`}>
           <span style={{ marginRight: 5 }}>View</span>
