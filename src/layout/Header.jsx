@@ -1,7 +1,14 @@
+import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import "./Header.css";
 
 function Header() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
+
   return (
     <header className="header">
       <div className="menu">
@@ -23,7 +30,24 @@ function Header() {
             />
           </svg>
         </NavLink>
-        <ul className="nav-list">
+        <div
+          className={`menu-icon ${menuOpen ? "open" : ""}`}
+          onClick={toggleMenu}
+        >
+          {menuOpen ? (
+            <div className="cross">
+              <div className="bar1"></div>
+              <div className="bar2"></div>
+            </div>
+          ) : (
+            <>
+              <div className="bar"></div>
+              <div className="bar"></div>
+              <div className="bar"></div>
+            </>
+          )}
+        </div>
+        <ul className={`nav-list ${menuOpen ? "open" : ""}`}>
           <li className="nav-item">
             <NavLink to="/">Home</NavLink>
           </li>
@@ -33,9 +57,17 @@ function Header() {
           <li className="nav-item">
             <NavLink to="#">Places</NavLink>
           </li>
+          <li className="nav-item sign-in">
+            <NavLink to="#">Sign in</NavLink>
+          </li>
         </ul>
       </div>
-      <div className="sign-in">Sign in</div>
+
+      <span className="outer-sign-in">
+        <NavLink style={{ textDecoration: "none", color: "#000" }} to="#">
+          Sign in
+        </NavLink>
+      </span>
     </header>
   );
 }

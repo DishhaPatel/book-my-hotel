@@ -11,3 +11,11 @@
   display: flex;
   width: 100%;
 }
+
+/* ######## Media Query  ###########*/
+
+@media (max-width: 768px) {
+  .explore-container {
+    display: block;
+  }
+}

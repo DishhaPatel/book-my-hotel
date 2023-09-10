@@ -89,3 +89,17 @@
   line-height: normal;
   cursor: pointer;
 }
+
+/* ######## Media Query  ###########*/
+
+@media (max-width: 992px) {
+  .filter-container {
+    flex: 0.3;
+  }
+}
+
+@media (max-width: 768px) {
+  .filter-container {
+    display: none;
+  }
+}

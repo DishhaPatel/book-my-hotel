@@ -11,3 +11,17 @@
   display: flex;
   flex-wrap: wrap;
 }
+
+/* ######## Media Query  ###########*/
+
+@media (max-width: 992px) {
+  .list-container {
+    flex: 0.7;
+  }
+}
+
+@media (max-width: 768px) {
+  .grid-container {
+    justify-content: center;
+  }
+}

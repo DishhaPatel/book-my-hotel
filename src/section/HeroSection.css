@@ -30,6 +30,7 @@
   left: 15%;
   height: 80vh;
   object-fit: cover;
+  max-width: 80%;
 }
 
 .overlay-bottom {
@@ -165,4 +166,13 @@
 }
 .person-menu:hover {
   box-shadow: 1px 1px rgb(163, 162, 162);
+}
+
+/* ######## Media Query  ###########*/
+
+@media (max-width: 992px) {
+  .form-container {
+    flex-direction: column;
+    align-items: center;
+  }
 }
