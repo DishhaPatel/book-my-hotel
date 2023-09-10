@@ -53,9 +53,11 @@ export default function HeroSection() {
         <div className="hero-text">
           <h2 className="hero-heading">Find the Perfect deal, always.</h2>
           <div className="hero-description">
-            Discover the best hotel deals with Book My Hotel. Enjoy comfort and
-            luxury tailored just for you. Your perfect stay is just a click
-            away. Book now!
+            Choose from a range of well-appointed rooms and suites, each
+            designed with your comfort in mind. Whether you're traveling solo,
+            with a partner, or with family, we have the perfect room for you.
+            Our rooms are equipped with plush bedding, flat-screen TVs,
+            high-speed Wi-Fi, and all the essentials to ensure a relaxing stay.
           </div>
         </div>
         <div className="form-container">
@@ -129,7 +131,7 @@ export default function HeroSection() {
             )}
           </div>
 
-          <button type="button" onClick={handleSearch}>
+          <button className="search-btn" type="button" onClick={handleSearch}>
             Search
           </button>
         </div>

@@ -22,7 +22,7 @@ function Filter({ selectedFilters, setSelectedFilters }) {
   return (
     <div className="filter-container">
       <div className="filter-header">
-        <h5>Filters</h5>
+        <h6>Filters</h6>
         {selectedFilters.length > 0 && (
           <button className="clear-all" onClick={() => setSelectedFilters([])}>
             CLEAR ALL
